@@ -9,4 +9,5 @@ our $schema = [int => {
     max => 255,
 }, {}];
 
+1;
 # ABSTRACT:

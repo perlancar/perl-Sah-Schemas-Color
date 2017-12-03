@@ -8,4 +8,5 @@ our $schema = [str => {
     match => qr/\A[0-9A-Fa-f]{6}\z/,
 }, {}];
 
+1;
 # ABSTRACT:

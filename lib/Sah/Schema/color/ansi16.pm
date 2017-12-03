@@ -9,4 +9,5 @@ our $schema = [str => {
                     (?:(bold|bright) \s )?(black|red|green|yellow|blue|magenta|cyan|white))\z/ix,
 }, {}];
 
+1;
 # ABSTRACT:
