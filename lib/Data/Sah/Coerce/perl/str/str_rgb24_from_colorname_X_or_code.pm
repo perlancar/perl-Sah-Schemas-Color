@@ -9,9 +9,8 @@ use warnings;
 
 sub meta {
     +{
-        v => 3,
+        v => 4,
         might_fail => 1,
-        enable_by_default => 0,
         prio => 50,
     };
 }
