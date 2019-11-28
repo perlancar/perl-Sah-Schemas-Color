@@ -1,6 +1,8 @@
-package Data::Sah::Coerce::perl::str::str_rgb24_from_colorname_X_or_code;
+package Data::Sah::Coerce::perl::To_str::From_str::rgb24_from_colorname_X_or_code;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
@@ -10,6 +12,7 @@ use warnings;
 sub meta {
     +{
         v => 4,
+        summary => 'Coerce RGB24 code or color name (from Graphics::ColorNames::X scheme) to RGB24 code',
         might_fail => 1,
         prio => 50,
     };
@@ -40,12 +43,6 @@ sub coerce {
 }
 
 1;
-# ABSTRACT: Coerce RGB24 code or color name (from Graphics::ColorNames::X scheme) to RGB24 code
+# ABSTRACT:
 
 =for Pod::Coverage ^(meta|coerce)$
-
-=head1 DESCRIPTION
-
-The rule is not enabled by default. You can enable it in a schema using e.g.:
-
- ["color::rgb24", "x.perl.coerce_rules"=>["str_rgb24_from_colorname_X_or_code"]]

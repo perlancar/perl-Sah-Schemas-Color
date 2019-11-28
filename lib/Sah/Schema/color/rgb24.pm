@@ -7,7 +7,7 @@ our $schema = [str => {
     summary => 'RGB 24-digit color, a hexdigit e.g. ffcc00', # XXX also allow other forms
     match => qr/\A[0-9A-Fa-f]{6}\z/,
     'x.completion' => ['colorname'],
-    'x.perl.coerce_rules' => ['str_rgb24_from_colorname_X_or_code'],
+    'x.perl.coerce_rules' => ['From_str::rgb24_from_colorname_X_or_code'],
 }, {}];
 
 1;
