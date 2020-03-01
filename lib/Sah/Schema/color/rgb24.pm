@@ -1,6 +1,8 @@
 package Sah::Schema::color::rgb24;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 our $schema = [str => {
@@ -8,6 +10,13 @@ our $schema = [str => {
     match => qr/\A[0-9A-Fa-f]{6}\z/,
     'x.completion' => ['colorname'],
     'x.perl.coerce_rules' => ['From_str::rgb24_from_colorname_X_or_code'],
+    examples => [
+        {data=>'000000' , valid=>1, res=>'000000'},
+        {data=>'black'  , valid=>1, res=>'000000'},
+        {data=>'FFffcc' , valid=>1, res=>'ffffcc'},
+        {data=>'#FFffcc', valid=>1, res=>'ffffcc'},
+        {data=>'foo'    , valid=>0},
+    ],
 }, {}];
 
 1;
