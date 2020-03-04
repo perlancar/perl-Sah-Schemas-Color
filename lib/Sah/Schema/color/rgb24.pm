@@ -11,10 +11,10 @@ our $schema = [str => {
     'x.completion' => ['colorname'],
     'x.perl.coerce_rules' => ['From_str::rgb24_from_colorname_X_or_code'],
     examples => [
-        {value=>'000000' , valid=>1, res=>'000000'},
-        {value=>'black'  , valid=>1, res=>'000000'},
-        {value=>'FFffcc' , valid=>1, res=>'ffffcc'},
-        {value=>'#FFffcc', valid=>1, res=>'ffffcc'},
+        {value=>'000000' , valid=>1, validated_value=>'000000'},
+        {value=>'black'  , valid=>1, validated_value=>'000000'},
+        {value=>'FFffcc' , valid=>1, validated_value=>'ffffcc'},
+        {value=>'#FFffcc', valid=>1, validated_value=>'ffffcc'},
         {value=>'foo'    , valid=>0},
     ],
 }, {}];

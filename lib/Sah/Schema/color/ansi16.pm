@@ -13,7 +13,7 @@ our $schema = [str => {
         {value=> 0, valid=>1},
         {value=>15, valid=>1},
         {value=>16, valid=>0},
-        {value=>'black'  , valid=>1, res=>'black'},
+        {value=>'black'  , valid=>1, validated_value=>'black'},
         {value=>'foo'    , valid=>0},
     ],
 }, {}];
