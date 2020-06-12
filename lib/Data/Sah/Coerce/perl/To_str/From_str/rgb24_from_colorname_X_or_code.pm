@@ -1,6 +1,6 @@
 package Data::Sah::Coerce::perl::To_str::From_str::rgb24_from_colorname_X_or_code;
 
-# AUTHOR
+# AUTHORITY
 # DATE
 # DIST
 # VERSION
@@ -33,10 +33,13 @@ sub coerce {
         "",
         "do { ", (
             "my \$tmp = lc $dt;",
-            "if (\$tmp =~ /\\A\#?([0-9a-f]{6})\\z/) { return [undef, \$1] } ",
-            "unless (\%__Sah::colorcodes_X) { tie \%__Sah::colorcodes_X, 'Graphics::ColorNames', 'X' } ",
-            "if (exists \$__Sah::colorcodes_X{\$tmp}) { return [undef, \$__Sah::colorcodes_X{\$tmp}] } ",
-            "[\"Unknown color name \\'\$tmp\\'\"]", ),
+            "if (\$tmp =~ /\\A\#?([0-9a-f]{6})\\z/) { [undef, \$1] } ",
+            "else { ",
+            "  unless (\%__Sah::colorcodes_X) { tie \%__Sah::colorcodes_X, 'Graphics::ColorNames', 'X' } ",
+            "  if (exists \$__Sah::colorcodes_X{\$tmp}) { return [undef, \$__Sah::colorcodes_X{\$tmp}] } ",
+            "  [\"Unknown color name \\'\$tmp\\'\"]",
+            "} ",
+        ),
         "}",
     );
     $res;
