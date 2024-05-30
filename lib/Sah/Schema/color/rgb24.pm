@@ -17,7 +17,7 @@ our $schema = [str => {
         {value=>'#FFffcc', valid=>1, validated_value=>'ffffcc'},
         {value=>'foo'    , valid=>0},
     ],
-}, {}];
+}];
 
 1;
 # ABSTRACT:

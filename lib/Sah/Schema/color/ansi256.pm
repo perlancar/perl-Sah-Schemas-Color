@@ -16,7 +16,7 @@ our $schema = [int => {
         {value=>'black'  , valid=>0}, # not supported yet
         {value=>'foo'    , valid=>0},
     ],
-}, {}];
+}];
 
 1;
 # ABSTRACT:
